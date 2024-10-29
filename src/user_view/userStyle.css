@@ -19,7 +19,15 @@ body{
 }
 
 img{
-    width: 90px;
+    width: 160px;
+    margin: 5px 40%;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+h1{
+    font-size: 1.6em;
+    text-align: center;
 }
 
 p{
@@ -35,9 +43,8 @@ p{
 }
 
 a{
-    cursor: pointer;
     flex: 0 1 100vw;
-    margin: 20px 35% 0px 35%;
+    margin: 20px 40% 0px 40%;
     padding-top: 3px;
     color: white;
     background-color: rgb(39, 39, 39);
