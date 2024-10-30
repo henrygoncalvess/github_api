@@ -17,6 +17,9 @@ conteúdo que a api retorna:
 <summary>Tabela de Conteúdos</summary>
 
 - [Instrução de uso](#instrução-de-uso)
+  - [GitHub Pages](#github-pages)
+  - [Clonando Repositório](#clonando-repositório)
+  - [Etapas](#etapas)
 - [Endpoints](#endpoints)
 - [Instrução de instalação - se falhar a primeira opção](#erro)
 
@@ -76,7 +79,41 @@ flowchart LR
 
 ## Instrução de uso
 
-clique aqui e teste o projeto
+### GitHub Pages
+
+link indisponível no momento
+
+<br>
+
+### Clonando Repositório
+No Terminal, certifique de que você está na pasta onde vai ficar o repositório
+
+```repositorios\clonados```
+``` bash
+git clone https://github.com/henrygoncalvess/github_api.git
+```
+
+<br>
+
+### Etapas
+
+#### 1. Abra o Visual Studio Code e instale a seguinte extenção:
+
+[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)  
+![image](https://github.com/user-attachments/assets/fa54bfd8-1c6b-4590-babc-5e2909e29ad8)
+
+#### 2. na pasta do repositório clonado  
+execute o arquivo "index.html" utilizando o **Live Server**:  
+
+![image](https://github.com/user-attachments/assets/bb455c04-d225-4e0b-a9c0-08dc8334a753)
+
+
+#### 3. na página principal do projeto, digite seu mesmo nome de usuário do GitHub
+
+
+https://github.com/user-attachments/assets/c06c6020-cfdf-4236-96eb-c6c8b6867dcc
+
+
 
 <br>
 
