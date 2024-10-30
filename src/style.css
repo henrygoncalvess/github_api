@@ -34,11 +34,15 @@ p{
     padding: 3px 0px;
 }
 
+div{
+    flex: 0 1 100vw;
+    text-align: center;
+    margin-top: 10px;
+}
+
 a{
     cursor: pointer;
-    flex: 0 1 100vw;
-    margin: 20px 35% 0px 35%;
-    padding-top: 3px;
+    padding: 3px 10px;
     color: white;
     background-color: rgb(39, 39, 39);
     height: 35px;

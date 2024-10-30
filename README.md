@@ -154,7 +154,17 @@ Siga os passos abaixo para criar seu Token.
 **5. Você verá uma mensagem dizendo para copiar o token e armazená-lo antes de sair,  
 pois o código não irá aparecer outra vez, guarde o token em segurança**
 
-em andamento...
+**6. dentro dos arquivos "script.js" e "userScript.js", substitua a mensagem de exemplo  
+pelo seu novo token de acesso**
+
+`antes`
+![antes](https://github.com/user-attachments/assets/97f0efe2-c2f4-4e46-8cba-d1e702c63d11)
+
+`depois`
+![depois](https://github.com/user-attachments/assets/3a4cfe3f-75a6-44a2-9b97-15aa53127b2b)
+
+**7. repita isso para "userScript.js" e faça os testes - executando o arquivo "index.html".  
+[clique aqui](#etapas) para ver como executar o arquivo**
 
 <br>
 

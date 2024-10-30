@@ -20,6 +20,13 @@ if (repoList.length == 0){
     repoList.forEach(async repoItem => {
         try{
             const repoCommit = await fetch(`${repoItem.commits.split('{')[0]}?per_page=100`)
+
+            // const token = 'seu token aqui'
+            // const repoCommit = await fetch(`${repoItem.commits.split('{')[0]}?per_page=100`, {
+            //     headers: {
+            //         authorization: `Bearer ${token}`
+            //     }
+            // })
         
             const commitData = await repoCommit.json()
         

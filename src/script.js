@@ -4,11 +4,17 @@ var button = document.getElementsByTagName('a')[0]
 class githubAPI {
     static async get(){
         try{
-            // requisição as informações de usuário
             const userInfo = await fetch(`https://api.github.com/users/${inputName.value}`)
+            
+            // const token = 'seu token aqui'
+            // const userInfo = await fetch(`https://api.github.com/users/${inputName.value}`, {
+            //     headers: {
+            //         authorization: `Bearer ${token}`
+            //     }
+            // })
 
             const userData = await userInfo.json()
-            
+
             if (!userData.name || userData.status === "404"){
                 window.alert('Usuário não encontrado, verifique se o nome de usuário está correto')
                 inputName.value = ''
