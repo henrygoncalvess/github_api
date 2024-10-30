@@ -33,10 +33,10 @@ class githubAPI {
 
 
                 // requisição aos repositórios
-                const repoInfo = await fetch(`https://api.github.com/users/${inputName.value}/repos`)
+                const repoInfo = await fetch(`https://api.github.com/users/${inputName.value}/repos?per_page=100`)
 
                 const repoData = await repoInfo.json()
-                
+
                 const repoList = []
                 
                 // capturando e armazenando dados que serão utilizados

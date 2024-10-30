@@ -53,3 +53,8 @@ a{
     font-size: 0.9em;
     text-transform: uppercase;
 }
+
+a:hover{
+    background-color: #2e3568;
+    border-bottom: 7px solid #182053;
+}

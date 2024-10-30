@@ -17,7 +17,7 @@ body{
 
     width: 100%;
     height: 100%;
-    margin: 30px 0px;
+    margin: 10px 0px;
 }
 
 img{
@@ -30,7 +30,7 @@ img{
 p{
     flex: 0 1 100vw;
     text-align: center;
-    margin-bottom: 5px;
+    margin: 5px 0px;
 }
 
 h1{
@@ -59,19 +59,23 @@ section{
     align-self: center;
 }
 
-div{
+#divRepo{
     cursor: pointer;
     color: white;
     background-color: #26272e;
     border: 1px solid black;
     border-radius: 20px;
     margin: 10px 5px;
-    padding: 3px;
+    padding: 5px;
     text-align: center;
 }
 
-div:hover{
-    background-color: #41466a;
+#divRepo:hover{
+    background-color: #2e3568;
+}
+
+strong{
+    font-size: 1.1em;
 }
 
 mark#star,
@@ -80,9 +84,10 @@ mark#commit{
     display: inline-block;
     border-radius: 10px;
     padding: 1px 7px 4px 7px;
-    margin: 10px 5px 0px 5px;
+    margin: 10px 0px 0px;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 0.9em;
 }
 
 mark#star{
@@ -97,17 +102,26 @@ mark#commit{
     background-color: rgb(98, 255, 98);
 }
 
-#button{
-    flex: 0 1 100px;
-    margin: 20px 40% 0px 40%;
+#divButton{
+    flex: 0 1 100vw;
+    display: inline-block;
+    text-align: left;
     padding-top: 3px;
+    height: 35px;
+}
+
+#button{
     color: white;
     background-color: rgb(39, 39, 39);
-    height: 35px;
-    text-decoration: none;
-    text-align: center;
     border-radius: 15px;
-    border-bottom: 7px solid black;
-    font-size: 0.9em;
+    text-decoration: none;
     text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 3px 15px;
+    border-bottom: 7px solid black;
+}
+
+#button:hover{
+    background-color: #2e3568;
+    border-bottom: 7px solid #182053;
 }

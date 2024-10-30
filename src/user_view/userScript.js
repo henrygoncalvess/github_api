@@ -1,17 +1,25 @@
 const userItems = JSON.parse(localStorage.getItem('userItems'))
 const repoList = JSON.parse(localStorage.getItem('repoList'))
 
-var userFollowers = document.querySelector('p')
+var userFollowers = document.querySelectorAll('p')
 var userImg = document.querySelector('img')
 var userName = document.querySelector('h1')
 
-userFollowers.innerHTML = `
+userFollowers[0].innerHTML = `
 <strong>Seguidores:</strong> ${userItems.followers} &nbsp; &nbsp;
 <strong>Seguindo:</strong> ${userItems.following}`
 
 userImg.setAttribute('src', userItems.avatar)
 
 userName.innerHTML = `Bem vindo <br> ${userItems.name}`
+
+let repoQuantity = repoList.length
+
+if(repoList.length == 100){
+    repoQuantity = "100+"
+}
+
+userFollowers[1].innerHTML = `<strong>Repositórios:</strong> ${repoQuantity}`
 
 if (repoList.length == 0){
     window.alert('Nenhum repositótio encontrado')
@@ -41,12 +49,12 @@ if (repoList.length == 0){
             card.setAttribute('id', 'repo')
         
             card.innerHTML = `
-                <div>
+                <div id="divRepo">
                     <strong>${repoItem.nameRepo}</strong><br>
                     ${repoItem.descRepo}<br>
                     <mark id="star">stars: ${repoItem.starRepo}</mark>
-                    <mark id="fork">forks: ${repoItem.forkRepo}</mark><br>
                     <mark id="commit">commits: ${commitsRepo}</mark>
+                    <mark id="fork">forks: ${repoItem.forkRepo}</mark>
                 </div>
             `
         
