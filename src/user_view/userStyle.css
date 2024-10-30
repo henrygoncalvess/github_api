@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body{
@@ -14,8 +15,9 @@ body{
     justify-content: center;
     align-content: center;
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0px;
 }
 
 img{
@@ -43,16 +45,47 @@ h1{
     padding: 3px 0px;
 }
 
+section{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    width: 800px;
+}
+
 #repo{
-    flex: 0 1 350px;
+    text-decoration: none;
+    flex: 1 1 290px;
+}
+
+div{
+    height: 200px;
+    cursor: pointer;
     color: white;
     background-color: #26272e;
     border: 1px solid black;
     border-radius: 20px;
-    margin: 10px;
-    padding: 8px 0px;
-    text-decoration: none;
+    margin: 10px 5px;
+    padding: 15px 0px 0px 0px;
     text-align: center;
+}
+
+mark#star,
+mark#fork{
+    display: inline-block;
+    border-radius: 10px;
+    padding: 1px 7px 4px 7px;
+    margin: 10px 5px 0px 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+mark#star{
+    background-color: rgb(255, 217, 0);
+}
+
+mark#fork{
+    background-color: rgb(39, 179, 255);
 }
 
 #button{

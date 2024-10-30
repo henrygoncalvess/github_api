@@ -4,6 +4,7 @@ var button = document.getElementsByTagName('a')[0]
 class githubAPI {
     static async get(){
         try{
+            // requisição as informações de usuário
             const userInfo = await fetch(`https://api.github.com/users/${inputName.value}`)
 
             const userData = await userInfo.json()
@@ -14,38 +15,42 @@ class githubAPI {
                 inputName.focus()
 
             }else{
-                localStorage.setItem('avatar_url', userData.avatar_url)
-                localStorage.setItem('name', userData.name)
-                localStorage.setItem('followers', userData.followers)
-                localStorage.setItem('following', userData.following)
+                // capturando e armazenando dados que serão utilizados
+                const userItems = {
+                    avatar: userData.avatar_url,
+                    name: userData.name,
+                    followers: userData.followers,
+                    following: userData.following
+                }
+
+                localStorage.setItem('userItems', JSON.stringify(userItems))
 
 
+                // requisição aos repositórios
                 const repoInfo = await fetch(`https://api.github.com/users/${inputName.value}/repos`)
 
                 const repoData = await repoInfo.json()
-
-                console.log(repoData);
-
-                const nameRepo = []
-                const descRepo = []
-                const starRepo = []
-                const forkRepo = []
-
+                
+                const repoList = []
+                
+                // capturando e armazenando dados que serão utilizados
                 repoData.forEach(data => {
-                    nameRepo.push(data.name)
-                    descRepo.push(data.description)
-                    starRepo.push(data.stargazers_count)
-                    forkRepo.push(data.forks_count)
+                    let repoItems = {
+                        nameRepo: data.name,
+                        descRepo: data.description,
+                        starRepo: data.stargazers_count,
+                        forkRepo: data.forks_count,
+                        url: data.html_url
+                    }
+
+                    repoList.push(repoItems)
                 })
 
-                localStorage.setItem('nameRepo', nameRepo)
-                localStorage.setItem('descRepo', descRepo)
-                localStorage.setItem('starRepo', starRepo)
-                localStorage.setItem('forkRepo', forkRepo)
+                localStorage.setItem('repoList', JSON.stringify(repoList))
 
+                // troca para página de vizualização do perfil
                 window.location.replace('./user_view/user.html')
             }
-
         } catch (error){
             if (error){
                 window.alert('Ooops... algo errado aconteceu, tente novamente mais tarde')
