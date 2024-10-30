@@ -19,9 +19,9 @@ conteúdo que a api retorna:
 - [Instrução de uso](#instrução-de-uso)
   - [GitHub Pages](#github-pages)
   - [Clonando Repositório](#clonando-repositório)
-  - [Etapas](#etapas)
+    - [Etapas](#etapas)
+  - [Token de acesso](#erro)
 - [Endpoints](#endpoints)
-- [Instrução de instalação - se falhar a primeira opção](#erro)
 
 </details>
 
@@ -81,7 +81,7 @@ flowchart LR
 
 ### GitHub Pages
 
-link indisponível no momento
+[clique aqui](https://henrygoncalvess.github.io/github_api/src/) para acessar
 
 <br>
 
@@ -113,7 +113,48 @@ execute o arquivo "index.html" utilizando o **Live Server**:
 
 https://github.com/user-attachments/assets/c06c6020-cfdf-4236-96eb-c6c8b6867dcc
 
+<br>
 
+## <a name="erro">Token de acesso</a>
+
+se você tentou executar a segunda opção [_Clonando Repositório_](#clonando-repositório)  
+e mesmo assim não funcionou, pode ser devido a algumas limitações que a API do github possui,  
+como por exemplo, **Rate limits**:
+
+"O GitHub limita o número de solicitações de API REST que você pode fazer dentro de um período específico.  
+Esse limite ajuda a evitar abusos e ataques de negação de serviço, além de garantir que a API permaneça  
+disponível para todos os usuários."
+
+> [!tip]
+> Confira a [documentação da API](https://docs.github.com/pt/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28) para mais informações
+
+Para resolver este problema, você precisará criar e enviar um **Personal access Token** no corpo das requisições.  
+Siga os passos abaixo para criar seu Token.
+
+#### 1. Acesse as configurações &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **2. clique na última opção**
+
+![image](https://github.com/user-attachments/assets/a386626c-e5ee-49ec-bd40-a77cf4b8e3b6)
+![image](https://github.com/user-attachments/assets/f0c5c219-3d13-45c0-8f29-fa4b4394cd23)
+
+<br>
+
+#### 3. selecione a opção para gerar um token clássico
+
+![image](https://github.com/user-attachments/assets/cb85c3f4-b7f6-460f-a00d-855bc1bd8d3f)
+
+<br>
+
+**4. digite o nome do token, expecifique que o tempo de expiração  
+é de 7 dias e marque apenas a caixa "repo". Após isso, mais abaixo clique em "gerar token"**
+
+![image](https://github.com/user-attachments/assets/cb2e378f-b209-47cc-90e0-89ec2a24f3e2)
+
+<br>
+
+**5. Você verá uma mensagem dizendo para copiar o token e armazená-lo antes de sair,  
+pois o código não irá aparecer outra vez, guarde o token em segurança**
+
+em andamento...
 
 <br>
 
@@ -219,9 +260,3 @@ Rota | Descrição
   }
 }
 ```
-
-<br>
-
-## <a name="erro">Instrução de instalação - se falhar a primeira opção</a>
-
-[Tutorial de uso - Vídeo](https://youtu.be/OvfLavRD1Os?si=Huv09VYBQ4Z505bx)
