@@ -1,6 +1,5 @@
 const userItems = JSON.parse(localStorage.getItem('userItems'))
 const repoList = JSON.parse(localStorage.getItem('repoList'))
-console.log(repoList);
 
 var userFollowers = document.querySelector('p')
 var userImg = document.querySelector('img')
@@ -14,19 +13,43 @@ userImg.setAttribute('src', userItems.avatar)
 
 userName.innerHTML = `Bem vindo <br> ${userItems.name}`
 
-repoList.forEach(repoItem => {
-    var card = document.createElement('a')
-    card.setAttribute('href', repoItem.url)
-    card.setAttribute('id', 'repo')
+if (repoList.length == 0){
+    window.alert('Nenhum repositótio encontrado')
 
-    card.innerHTML = `
-        <div>
-            <strong>${repoItem.nameRepo}</strong><br>
-            ${repoItem.descRepo}<br>
-            <mark id="star">stars: ${repoItem.starRepo}</mark>
-            <mark id="fork">forks: ${repoItem.forkRepo}</mark>
-        </div>
-    `
+}else{
+    repoList.forEach(async repoItem => {
+        try{
+            const repoCommit = await fetch(`${repoItem.commits.split('{')[0]}?per_page=100`)
+        
+            const commitData = await repoCommit.json()
+        
+            let commitsRepo = commitData.length
+        
+            if(commitData.length == 100){
+                commitsRepo = "100+"
+            }
+        
+            let card = document.createElement('a')
+            card.setAttribute('href', repoItem.url)
+            card.setAttribute('id', 'repo')
+        
+            card.innerHTML = `
+                <div>
+                    <strong>${repoItem.nameRepo}</strong><br>
+                    ${repoItem.descRepo}<br>
+                    <mark id="star">stars: ${repoItem.starRepo}</mark>
+                    <mark id="fork">forks: ${repoItem.forkRepo}</mark><br>
+                    <mark id="commit">commits: ${commitsRepo}</mark>
+                </div>
+            `
+        
+            document.getElementsByTagName('section')[0].appendChild(card)
 
-    document.getElementsByTagName('section')[0].appendChild(card)
-})
+        } catch (error){
+            if (error){
+                console.log({error: error})
+                window.alert('Ooops... algo errado aconteceu, tente novamente mais tarde')
+            }
+        }
+    })
+}

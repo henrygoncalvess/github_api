@@ -40,7 +40,8 @@ class githubAPI {
                         descRepo: data.description,
                         starRepo: data.stargazers_count,
                         forkRepo: data.forks_count,
-                        url: data.html_url
+                        url: data.html_url,
+                        commits: data.commits_url
                     }
 
                     repoList.push(repoItems)

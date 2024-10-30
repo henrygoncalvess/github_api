@@ -48,30 +48,35 @@ h1{
 section{
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
-    justify-content: center;
+    align-content: space-evenly;
+    justify-content: space-evenly;
     width: 800px;
 }
 
 #repo{
     text-decoration: none;
-    flex: 1 1 290px;
+    flex: 1 1 270px;
+    align-self: center;
 }
 
 div{
-    height: 200px;
     cursor: pointer;
     color: white;
     background-color: #26272e;
     border: 1px solid black;
     border-radius: 20px;
     margin: 10px 5px;
-    padding: 15px 0px 0px 0px;
+    padding: 3px;
     text-align: center;
 }
 
+div:hover{
+    background-color: #41466a;
+}
+
 mark#star,
-mark#fork{
+mark#fork,
+mark#commit{
     display: inline-block;
     border-radius: 10px;
     padding: 1px 7px 4px 7px;
@@ -86,6 +91,10 @@ mark#star{
 
 mark#fork{
     background-color: rgb(39, 179, 255);
+}
+
+mark#commit{
+    background-color: rgb(98, 255, 98);
 }
 
 #button{
