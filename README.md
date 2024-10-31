@@ -5,7 +5,7 @@
 <img src="https://img.shields.io/github/license/henrygoncalvess/github_api?style=for-the-badge&labelColor=gray&color=97ca00"> <a href="https://learning.postman.com/docs/introduction/overview/"><img src="https://img.shields.io/badge/postman-11.16.0-FF6C37?style=for-the-badge&logo=postman&logoColor=FF6C37&labelColor=gray"></a>
 
 consumindo a API do GitHub para listar os projetos de um usuário ou organização.  
-conteúdo que a api retorna:
+conteúdo manipulado que a api retorna:
 
 - [x] Nome do repositório
 - [x] Descrição
