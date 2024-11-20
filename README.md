@@ -1,9 +1,5 @@
 # GitHub API
 
-### licença e tecnologias utilizadas
-
-<img src="https://img.shields.io/github/license/henrygoncalvess/github_api?style=for-the-badge&labelColor=gray&color=97ca00"> <a href="https://learning.postman.com/docs/introduction/overview/"><img src="https://img.shields.io/badge/postman-11.16.0-FF6C37?style=for-the-badge&logo=postman&logoColor=FF6C37&labelColor=gray"></a>
-
 consumindo a API do GitHub para listar os projetos de um usuário ou organização.  
 conteúdo manipulado que a api retorna:
 
@@ -12,15 +8,28 @@ conteúdo manipulado que a api retorna:
 - [x] Quantidade de Stars
 - [x] Quantidade de Forks
 - [x] Número de commits do repositório
+
+<br>
+
+**licença e tecnologias utilizadas**:  
+<img src="https://img.shields.io/github/license/henrygoncalvess/github_api?style=for-the-badge&labelColor=gray&color=97ca00"> <a href="https://learning.postman.com/docs/introduction/overview/"><img src="https://img.shields.io/badge/postman-11.16.0-FF6C37?style=for-the-badge&logo=postman&logoColor=FF6C37&labelColor=gray"></a>
+
+**Ponto de Entrada**:  
+<span><img src="https://img.shields.io/badge/index.html-333333?style=for-the-badge"></span>
+
+**Caminho**:  
+<span><img src="https://img.shields.io/badge/src/index.html-333333?style=for-the-badge"></span>
+
+<br>
   
 <details open="open">
 <summary>Tabela de Conteúdos</summary>
 
 - [Instrução de uso](#instrução-de-uso)
-  - [GitHub Pages](#github-pages)
-  - [Clonando Repositório](#clonando-repositório)
+  - [I. GitHub Pages](#i-github-pages)
+  - [II. Clonando Repositório](#ii-clonando-repositório)
     - [Etapas](#etapas)
-  - [Token de acesso](#erro)
+  - [III. Token de acesso](#erro)
 - [Endpoints](#endpoints)
 
 </details>
@@ -79,13 +88,13 @@ flowchart LR
 
 ## Instrução de uso
 
-### GitHub Pages
+### I. GitHub Pages
 
 [clique aqui](https://henrygoncalvess.github.io/github_api/src/) para acessar
 
 <br>
 
-### Clonando Repositório
+### II. Clonando Repositório
 No Terminal, certifique de que você está na pasta onde vai ficar o repositório
 
 ```repositorios\clonados```
@@ -115,7 +124,7 @@ https://github.com/user-attachments/assets/c06c6020-cfdf-4236-96eb-c6c8b6867dcc
 
 <br>
 
-## <a name="erro">Token de acesso</a>
+### III. <a name="erro">Token de acesso</a>
 
 se você tentou executar a segunda opção [_Clonando Repositório_](#clonando-repositório)  
 e mesmo assim não funcionou, pode ser devido a algumas limitações que a API do github possui,  
